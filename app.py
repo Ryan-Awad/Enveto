@@ -15,5 +15,9 @@ def create():
 def about():
     return render_template("aboutpage.html")
 
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
