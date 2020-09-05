@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Organization Request Application</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
-    </head>
-    <body>
-        <div class="holder">
-            <h2>Enveto Organization Request Application</h2>
-            <form>
-                <div class="user-input">
-                    <input type="text" name="" required="">
-                    <label>Enter Your Full Name</label>
-                    <span></span>
-                </div>
-                <input class="cool-button" type="submit" value="Next Question" name="">
-            </form>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
+{% endblock head %}
+{% block content %}
+    <div class="holder">
+        <h2>Enveto Organization Request Application</h2>
+        <form>
+            <div class="user-input">
+                <input type="text" name="" required="">
+                <label>Enter Your Full Name</label>
+                <span></span>
+            </div>
+            <input class="cool-button" type="submit" value="Next Question" name="">
+        </form>
+    </div>
+{% endblock content %}

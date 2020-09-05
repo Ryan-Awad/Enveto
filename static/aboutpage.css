@@ -1,7 +1,6 @@
 *{
   padding:0;
   box-sizing: border-box;
-
 }
 body{
   background:#a2e0dc;
@@ -29,7 +28,7 @@ body{
   margin:5px;
   margin-bottom: 50px;
   width: 300px;
-  padding:20
+  padding:20;
   line-height: 20px;
   color: #556;
   position: relative;
