@@ -1,0 +1,15 @@
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+{% endblock head %}
+
+{% block content %}
+  <div class="reg-form">
+  <h1> Register Now </h1>
+  <form>
+    <input type="email" class="inputbox" placeholder="Your Email">
+    <input type="password" class="inputbox" placeholder="Your Password">
+    <span></span>
+  </form>
+  <button type="button" class="button">Sign up</button>
+  <p>Already have an account? <a href="loginpage.html">Log in</a></p>
+{% endblock content %}
