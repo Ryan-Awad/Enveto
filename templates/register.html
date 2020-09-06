@@ -1,51 +1,40 @@
-{% block head %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
-{% endblock head %}
-
-{% block content %}
-  <div class="reg-form">
-    <h1> Register Now </h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <title>Register</title>
+</head>
+<body>
     <form method="POST" action="">
-      {{ form.hidden_tag() }} <!-- Protection against CSRF attacks -->
+        {{ form.hidden_tag() }} <!-- Protection against CSRF attacks -->
+        <div>
+            {{ form.first_name.label() }}
+            {{ form.first_name() }}
+        </div>
 
-      {{ form.first_name(class="inputbox", placeholder="First Name") }}
-      {% if form.first_name.errors %}
-        {% for error in form.first_name.errors %}
-          <span>{{ error }}</span>
-        {% endfor %}
-      {% endif %}
+        <div>
+            {{ form.last_name.label() }}
+            {{ form.last_name() }}
+        </div>
 
-      {{ form.last_name(class="inputbox", placeholder="Last Name") }}
-      {% if form.last_name.errors %}
-        {% for error in form.last_name.errors %}
-          <span>{{ error }}</span>
-        {% endfor %}
-      {% endif %}
+        <div>
+            {{ form.email.label() }}
+            {{ form.email() }}
+        </div>
 
-      {{ form.email(class="inputbox", placeholder="Email") }}
-      {% if form.email.errors %}
-        {% for error in form.email.errors %}
-          <span>{{ error }}</span>
-        {% endfor %}
-      {% endif %}
+        <div>
+            {{ form.password.label() }}
+            {{ form.password() }}
+        </div>
 
-      {{ form.password(class="inputbox", placeholder="Password") }}
-      {% if form.password.errors %}
-        {% for error in form.password.errors %}
-          <span>{{ error }}</span>
-        {% endfor %}
-      {% endif %}
-      
-      {{ form.confirm_password(class="inputbox", placeholder="Confirm Password") }}
-      {% if form.password.errors %}
-        {% for error in form.password.errors %}
-          <span>{{ error }}</span>
-        {% endfor %}
-      {% endif %}
+        <div>
+            {{ form.confirm_password.label() }}
+            {{ form.confirm_password() }}
+        </div>
 
-      {{ form.submit(class="button") }}
+        <div>
+            {{ form.submit() }}
+        </div>
     </form>
-    <!--<button type="button" class="button">Sign up</button>-->
-    <p>Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
-  </div>
-{% endblock content %}
+</body>
+</html>

@@ -1,17 +1,28 @@
-{% extends "base.html" %}
-{% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
-{% endblock head %}
-{% block content %}
-    <div class="holder">
-        <h2>Enveto Organization Request Application</h2>
-        <form>
-            <div class="user-input">
-                <input type="text" name="" required="">
-                <label>Enter Your Full Name</label>
-                <span></span>
-            </div>
-            <input class="cool-button" type="submit" value="Next Question" name="">
-        </form>
-    </div>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
+</head>
+<body>
+  <div class="reg-form">
+  <h1> Enveto Boycott Request Application </h1>
+  <form>
+    <label>What is the name of the organization/company you intend on organizing the boycott for?</label>
+    <input type="text" class="inputbox" placeholder="Type here">
+    <label>Why do you think a boycott would be an appropriate approach?</label>
+    <input type="text" class="inputbox" placeholder="Type here">
+    <label>What are past examples of how this company/org has effected the environment?</label>
+    <input type="text" class="inputbox" placeholder="Type here">
+    <label>What do you plan to accomplish through this boycott?</label>
+    <input type="text" class="inputbox" placeholder="Type here">
+    <label>When do you intend for this boycott to officially begin?</label>
+    <input type="text" class="inputbox" placeholder="Type here">
+      <span></span>
+    </form>
+    <button type="button" class="button">Submit Form</button>
+</body>
+</html>

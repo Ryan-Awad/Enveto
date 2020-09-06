@@ -1,91 +1,44 @@
-*
-{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    outline:none;
-    font-family: 'Poppins',sans-serif;
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #c5ded3;
+  font-family: Poppins, sans-serif;
+  font-size:12px;
+  align-items: center;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #c5ded3;
+.reg-form{
+  width: 300px;
+  background: #fff;
+  padding: 10%;
+  margin: 8% auto 0;
+  text-align: center;
+  border-radius: 5%;
+  align-items: center;
 }
-
-h2 {
-    text-align:center;
+.reg-form h1{
+  color:#555;
+  margin-bottom: 20%;
 }
+.inputbox{
+  border-radius:20px;
+  padding:10px;
+  margin: 0;
+  margin-bottom: 8%;
+  width: 100%;
+  border:1px solid #999;
+  outline:none;
 
-.holder {
-    position: relative;
-    width: 700px;
-    padding: 40px;
-    background:#f5fcf6;
-    border-radius: 5px;
 }
-
-.holder h2 {
-    align-items: center;
-    color:#556;
-    margin-bottom:50px;
-    border-radius: 5px;
-}
-
-.user-input {
-    position:relative;
-    height: 40px;
-    width:100%;
-}
-
-.user-input input[type="text"] {
-    position: absolute;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    font-size: 16px;
-    width: 100%;
-}
-
-.user-input label {
-    position:absolute;
-    top:0;
-    left:0;
-    color: #555;
-    pointer-events: none;
-    display: block;
-    transition: 0.5s;
-}
-
-.user-input input[type="text"]:focus + label,
-.user-input input[type="text"]:valid + label
-{
-    transform: translateY(-35px);
-    font-size: 14px;
-    color: #555;
-    background: #bed4c7;
-    padding: 2px 6px;
-    border-radius: 5px;
-}
-
-.user-input span {
-    position:absolute;
-    bottom:16px;
-    right:0;
-    display: block;
-    background: #555;
-    width: 100%;
-    height:4px;
-    border-radius: 5px;
-}
-
-.cool-button[type=submit] {
-    min-height:2vh;
-    padding:5px;
-    background: #fff;
-    color: #555;
-    border-radius: 2px;
-    border-color:#555;
+button{
+  background-color: #bed4c7
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 10px;
+  border:none;
+  outline: none;
+  cursor: pointer;
 }
