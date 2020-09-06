@@ -1,0 +1,14 @@
+[
+    {
+        "first_name": "Sam",
+        "last_name": "Woods",
+        "email": "test@test.com",
+        "password": "a0ec38e2913085865c2d90a453b999bf"
+    },
+    {
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john_doe@test.com",
+        "password": "25f9e794323b453885f5181f1b624d0b"
+    }
+]
