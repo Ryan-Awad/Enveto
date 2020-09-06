@@ -8,7 +8,7 @@ app.config["SECRET_KEY"] = "b691319c58ebad7d5668e50058b2cf9d"
 
 def encrypt_md5(string):
     string = string.encode()
-    md5_digest = hashlib.md5(string).digest()
+    md5_digest = hashlib.md5(string).hexdigest()
     return md5_digest
 
 
@@ -37,14 +37,13 @@ def register():
             "password": password
         }
 
-        with open('database/accounts.json', 'r') as db_read:
-            with open('database/accounts.json', 'w') as db_write:
-                db_read = json.load(db_read)
-                db_read.append(account_data)
-                json.dump(db_read, db_write, indent=4)
+        db_read = json.load(open('database/accounts.json', 'r'))
+        db_write = open('database/accounts.json', 'w')
+        db_read.append(account_data)
+        json.dump(db_read, db_write, indent=4)
         
         return redirect(url_for('home'))
-        
+
     return render_template("register.html", form=reg_form)
 
 @app.route("/login")
