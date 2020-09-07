@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }} <!-- Protection against CSRF attacks -->
+        <div>
+            {{ form.email.label() }}
+            {{ form.email() }}
+        </div>
+
+        <div>
+            {{ form.password.label() }}
+            {{ form.password() }}
+        </div>
+
+        <div>
+            {{form.remember() }} <span>Remember me<span>
+        </div>
+
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>
