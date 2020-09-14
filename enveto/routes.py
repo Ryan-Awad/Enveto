@@ -32,7 +32,7 @@ def register():
         db.session.add(user) # adding user to the database
         db.session.commit() # commit changes to database
 
-        print("Account registered!") # change to flash
+        print("Account successfully created!")
         return redirect(url_for('login'))
 
     return render_template("register.html", form=reg_form)
@@ -44,13 +44,14 @@ def login():
         return redirect(url_for('home'))
 
     login_form = LoginForm()
-    if login_form.validate_on_submit():
+    if login_form.validate_on_submit(): 
         user = User.query.filter_by(email=login_form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, login_form.password.data):
             login_user(user, remember=login_form.remember.data)
             return redirect(url_for('home'))
         else:
             print('Login Failed. Please check email and password.')
+
 
     return render_template("login.html", form=login_form)
 
