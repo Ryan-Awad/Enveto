@@ -4,7 +4,7 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "b691319c58ebad7d5668e50058b2cf9d"
+app.config["SECRET_KEY"] = "SECRET_KEY_HERE"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///databases/enveto.db"
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
